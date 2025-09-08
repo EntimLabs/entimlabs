@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Entim Labs — Web, Software & AI</title>
+  <meta name="description" content="Entim Labs is a web development & custom software agency delivering AI-powered solutions with a futuristic touch." />
+  <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Fonts (no frameworks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon (inline SVG data URI) -->
+  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><rect width="256" height="256" rx="48" fill="%230b0f14"/><path d="M64 168h64l-16 24h-48zM128 64h64l-24 36h-40z" fill="%2322d3ee"/><path d="M96 96h64l-48 72H48z" fill="%23a855f7"/></svg>' />
+
+  <script>
+    // remove no-js class early for progressive enhancement
+    document.documentElement.classList.remove('no-js');
+  </script>
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div id="progress"></div>
+
+  <!-- Animated background canvas -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Aurora gradient blobs -->
+  <div class="aurora a1" aria-hidden="true"></div>
+  <div class="aurora a2" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Entim Labs home">
+        <svg class="logo" width="28" height="28" viewBox="0 0 256 256" aria-hidden="true">
+          <rect width="256" height="256" rx="56" fill="currentColor" opacity="0.15"/>
+          <path d="M64 168h64l-16 24h-48zM128 64h64l-24 36h-40z" fill="currentColor"/>
+          <path d="M96 96h64l-48 72H48z" fill="currentColor" opacity="0.6"/>
+        </svg>
+        <span class="brand-text">Entim <strong>Labs</strong></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="nav-cta"><a href="#contact" class="btn btn-primary">Start a Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-content">
+        <h1 class="glow reveal">
+          Building the <span class="gradient-text">futures</span> of web, software & <span class="ai-badge">AI</span>
+        </h1>
+        <p class="lead reveal">
+          Entim Labs crafts high-performance websites, custom applications, and AI solutions with a sleek, futuristic polish.
+        </p>
+        <div class="cta-row reveal">
+          <a href="#contact" class="btn btn-primary magnetic">Start a project</a>
+          <a href="#work" class="btn btn-ghost">See our work</a>
+        </div>
+
+        <div class="stats reveal" role="group" aria-label="Entim Labs highlights">
+          <div class="stat">
+            <span class="num">50+ </span>
+            <span class="label">Projects shipped</span>
+          </div>
+          <div class="stat">
+            <span class="num">~0.8s</span>
+            <span class="label">Median LCP</span>
+          </div>
+          <div class="stat">
+            <span class="num">99.9%</span>
+            <span class="label">Uptime on managed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE (tech we use) -->
+    <section class="marquee" aria-label="Tech we use">
+      <div class="marquee-track">
+        <span>TypeScript</span><span>Next Concepts</span><span>Node</span><span>Python</span><span>Postgres</span><span>Cloudflare</span><span>AWS</span><span>OpenAI</span><span>Vercel</span><span>Docker</span>
+      </div>
+      <div class="marquee-track" aria-hidden="true">
+        <span>TypeScript</span><span>Next Concepts</span><span>Node</span><span>Python</span><span>Postgres</span><span>Cloudflare</span><span>AWS</span><span>OpenAI</span><span>Vercel</span><span>Docker</span>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section container">
+      <header class="section-head reveal">
+        <h2 class="section-title">Services</h2>
+        <p class="section-sub">From idea to launch—designed, engineered, and optimized.</p>
+      </header>
+
+      <div class="grid cards">
+        <article class="card tilt reveal">
+          <div class="card-decor"></div>
+          <h3>Web Development</h3>
+          <p>Fast, scalable, accessible websites and web apps that convert—SEO-ready and blazing on all devices.</p>
+          <ul class="chip-list">
+            <li>SPA/MPA</li><li>eCommerce</li><li>Marketing sites</li>
+          </ul>
+          <a href="#contact" class="btn-link">Launch yours →</a>
+        </article>
+
+        <article class="card tilt reveal">
+          <div class="card-decor"></div>
+          <h3>Custom Software</h3>
+          <p>Tailored platforms & dashboards built around your workflows—security, performance, and reliability first.</p>
+          <ul class="chip-list">
+            <li>APIs</li><li>Integrations</li><li>Data pipelines</li>
+          </ul>
+          <a href="#contact" class="btn-link">Talk scope →</a>
+        </article>
+
+        <article class="card tilt reveal">
+          <div class="card-decor"></div>
+          <h3>AI Solutions</h3>
+          <p>LLM-powered tools, automation, and intelligent interfaces that unlock new value for your team & users.</p>
+          <ul class="chip-list">
+            <li>Chatbots</li><li>Assistants</li><li>RAG</li>
+          </ul>
+          <a href="#contact" class="btn-link">Explore AI →</a>
+        </article>
+
+        <article class="card tilt reveal">
+          <div class="card-decor"></div>
+          <h3>Design & UX</h3>
+          <p>Frictionless experiences with a premium look—prototypes, design systems, and interaction design.</p>
+          <ul class="chip-list">
+            <li>UI kits</li><li>Prototyping</li><li>Audits</li>
+          </ul>
+          <a href="#contact" class="btn-link">Improve UX →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section container">
+      <header class="section-head reveal">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-sub">A peek at recent builds—visuals are placeholders.</p>
+      </header>
+
+      <div class="grid work-grid">
+        <article class="work-card tilt reveal">
+          <div class="thumb gradient-1"></div>
+          <div class="work-meta">
+            <h3>Fintech Analytics Suite</h3>
+            <p>Data-dense dashboards with realtime streaming and alerts.</p>
+          </div>
+        </article>
+
+        <article class="work-card tilt reveal">
+          <div class="thumb gradient-2"></div>
+          <div class="work-meta">
+            <h3>AI Support Assistant</h3>
+            <p>LLM-driven triage + knowledge search, deflecting 60% tickets.</p>
+          </div>
+        </article>
+
+        <article class="work-card tilt reveal">
+          <div class="thumb gradient-3"></div>
+          <div class="work-meta">
+            <h3>Headless Commerce</h3>
+            <p>Lightning storefront, A/B tested UX, +14% conversion.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section container">
+      <header class="section-head reveal">
+        <h2 class="section-title">Process</h2>
+        <p class="section-sub">Clear steps—from explore to evolve.</p>
+      </header>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="step">01</span>
+          <h3>Explore</h3>
+          <p>Define goals, constraints, and KPIs. Technical discovery & solution mapping.</p>
+        </li>
+        <li class="reveal">
+          <span class="step">02</span>
+          <h3>Design</h3>
+          <p>Information architecture, wireframes, prototypes, and visual language.</p>
+        </li>
+        <li class="reveal">
+          <span class="step">03</span>
+          <h3>Build</h3>
+          <p>Iterative development, CI/CD, QA. Performance and accessibility baked in.</p>
+        </li>
+        <li class="reveal">
+          <span class="step">04</span>
+          <h3>Evolve</h3>
+          <p>Analytics-driven improvements, A/B testing, and ongoing support.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <header class="section-head reveal">
+        <h2 class="section-title">About Entim Labs</h2>
+        <p class="section-sub">We’re a tight, senior team shipping premium experiences—fast.</p>
+      </header>
+      <div class="about-body reveal">
+        <p>
+          We combine deep engineering with refined design to build products that feel effortless.
+          From greenfield apps to complex integrations and AI-assisted workflows, we deliver
+          outcomes—not just code.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <header class="section-head reveal">
+        <h2 class="section-title">Let’s build something</h2>
+        <p class="section-sub">Tell us about your project. We’ll reply within one business day.</p>
+      </header>
+
+      <form class="contact-form card reveal" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" placeholder="Ada Lovelace" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Project details</label>
+          <textarea id="message" name="message" rows="5" placeholder="Goals, timeline, budget…"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary magnetic">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-text">Entim <strong>Labs</strong></span>
+        <span class="small">Web • Software • AI</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="small">© <span id="year"></span> Entim Labs. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
