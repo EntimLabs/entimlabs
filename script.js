@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = data.get('name')?.toString().trim();
       const email = data.get('email')?.toString().trim();
 
-      if (!name || !email || !/^\S+@\S+\.\S+$/.test(email)) {
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
         statusEl.textContent = 'Please provide a valid name and email.';
         statusEl.style.color = '#ffb4b4';
         return;
