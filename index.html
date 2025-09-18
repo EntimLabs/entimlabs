@@ -344,8 +344,10 @@
         </div>
       </form> -->
 
-
-<form class="contact-form card reveal" novalidate
+<!-- ---------------------------------------------------
+---------------------------------------------------
+--------------------------------------------------- -->
+<!-- <form class="contact-form card reveal" 
   action="https://formspree.io/f/xgvljbel"
   method="POST"
 >
@@ -363,11 +365,42 @@
     <textarea name="message" placeholder="Write your inquiry.."></textarea>
   </label>
   </div>
-  <!-- your other form fields go here -->
+
+   <div>
   <button class="btn btn-primary magnetic" type="submit">Send Message</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+  </div>
+</form> -->
+
+
+<!-- ---------------------------------------------------
+---------------------------------------------------
+--------------------------------------------------- -->
+
+<form 
+  action="https://formspree.io/f/xgvljbel"
+  method="POST"
+>
+
+<div class="form-row">
+  <label>
+    Your email:
+    <input placeholder="yourname@email.com" type="email" name="email">
+  </label>
+  </div>
+
+  <div class="form-row">
+  <label>
+    Your message:
+    <textarea name="message" placeholder="Write your inquiry.."></textarea>
+  </label>
+  </div>
+
+   <div>
+  <button class="btn btn-primary magnetic" type="submit">Send Message</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+  </div>
 </form>
-
-
 
     </section>
   </main>
