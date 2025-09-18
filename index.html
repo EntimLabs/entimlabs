@@ -7,6 +7,10 @@
   <meta name="description" content="Entim Labs is a web development & custom software agency delivering AI-powered solutions with a futuristic touch." />
   <meta name="theme-color" content="#0b0f14" />
 
+
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <!-- Fonts (no frameworks) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -23,6 +27,9 @@
   </script>
 </head>
 <body>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <!-- Scroll progress -->
   <div id="progress"></div>
 
@@ -152,7 +159,7 @@
     </section>
 
     <!-- WORK -->
-    <section id="work" class="section container">
+    <!-- <section id="work" class="section container">
       <header class="section-head reveal">
         <h2 class="section-title">Selected Work</h2>
         <p class="section-sub">A peek at recent builds—visuals are placeholders.</p>
@@ -160,15 +167,16 @@
 
       <div class="grid work-grid">
         <article class="work-card tilt reveal">
-          <div class="thumb gradient-1"></div>
+          <div class="thumb gradient-1"><img src="image.jpg" height="100%" width="100%"></div>
           <div class="work-meta">
-            <h3>Fintech Analytics Suite</h3>
-            <p>Data-dense dashboards with realtime streaming and alerts.</p>
+
+            <h3>Cartado Cafe</h3>
+            <p>A website design for cartado cafe</p>
           </div>
         </article>
 
         <article class="work-card tilt reveal">
-          <div class="thumb gradient-2"></div>
+          <div class="thumb gradient-2"><img src="image.jpg" height="100%" width="100%"></div>
           <div class="work-meta">
             <h3>AI Support Assistant</h3>
             <p>LLM-driven triage + knowledge search, deflecting 60% tickets.</p>
@@ -183,7 +191,68 @@
           </div>
         </article>
       </div>
-    </section>
+    </section> -->
+
+
+
+
+    <section id="work" class="section container">
+  <header class="section-head reveal">
+    <h2 class="section-title">Selected Work</h2>
+    <p class="section-sub">A peek at recent builds—swipe to explore.</p>
+  </header>
+
+  <!-- Swiper -->
+  <div class="swiper work-swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <article class="work-card tilt reveal">
+          <div class="thumb">
+            <img src="image.jpg" alt="Cartado Cafe" />
+          </div>
+          <div class="work-meta">
+            <h3>Cartado Cafe</h3>
+            <p>A modern website design for Cartado Cafe.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <article class="work-card tilt reveal">
+          <div class="thumb">
+            <img src="image.jpg" alt="AI Support Assistant" />
+          </div>
+          <div class="work-meta">
+            <h3>AI Support Assistant</h3>
+            <p>LLM-driven triage + knowledge search, deflecting 60% tickets.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <article class="work-card tilt reveal">
+          <div class="thumb">
+            <img src="image.jpg" alt="Headless Commerce" />
+          </div>
+          <div class="work-meta">
+            <h3>Headless Commerce</h3>
+            <p>Lightning storefront, A/B tested UX, +14% conversion.</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+
+    <!-- Navigation + Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
 
     <!-- PROCESS -->
     <section id="process" class="section container">
@@ -238,7 +307,7 @@
         <p class="section-sub">Tell us about your project. We’ll reply within one business day.</p>
       </header>
 
-      <form class="contact-form card reveal" novalidate>
+      <form action="https://formspree.io/f/xgvljbel" method="POST" class="contact-form card reveal" novalidate>
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" autocomplete="name" placeholder="Ada Lovelace" required />
@@ -277,5 +346,6 @@
   </footer>
 
   <script src="script.js" defer></script>
+  <script src="test.js" defer></script>
 </body>
 </html>
