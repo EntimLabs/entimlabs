@@ -10,6 +10,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const revealElements = document.querySelectorAll(
+    '.hero-copy > *, .hero-art, .trust-inner span, .section-heading, .service-item, ' +
+    '.work-copy > *, .project-card, .approach-header > *, .process-list li, ' +
+    '.about-inner > *, .contact-copy > *, .contact-form > *'
+  );
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if ('IntersectionObserver' in window && !prefersReducedMotion && revealElements.length) {
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+
+    revealElements.forEach((element, index) => {
+      element.classList.add('reveal-on-scroll');
+      element.style.setProperty('--reveal-delay', `${index % 4 * 55}ms`);
+      revealObserver.observe(element);
+    });
+    document.body.classList.add('motion-ready');
+  }
+
   if (year) year.textContent = new Date().getFullYear();
 
   if (!toggle || !menu) return;
